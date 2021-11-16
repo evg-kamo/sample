@@ -44,7 +44,7 @@
                         <StackLayout>
                             <Label Text="{Binding Name}"
                                    FontSize="Medium"
-                                   Padding="36"
+                                   Padding="12"
                                    TextColor="White"/>
                         </StackLayout>
                     </DataTemplate>

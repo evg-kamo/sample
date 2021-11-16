@@ -29,17 +29,20 @@ namespace sample
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            // デバック開始時に出力
+            Console.WriteLine("開始");
         }
 
         protected override void OnSleep()
         {
-            // Handle when your app sleeps
+            // アプリを閉じた時に出力
+            Console.WriteLine("中断");
         }
 
         protected override void OnResume()
         {
-            // Handle when your app resumes
+            // アプリを中断から再度開いたときに出力
+            Console.WriteLine("再開");
         }
     }
 }
