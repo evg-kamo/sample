@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sample.MainPage"
+             BackgroundColor="Black">
+
+    <StackLayout>
+        <Frame BackgroundColor="Black" Padding="12">
+            <Label x:Name="hedder"
+                   BackgroundColor="White"
+                   Padding="12"
+                   WidthRequest="256"
+                   HorizontalOptions="Center"
+                   Text="      SixTONES"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="36"
+                   TextDecorations="None">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="Anton-Regular.ttf#Anton"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+        </Frame>
+
+        <Label Padding="12"/>
+        <Entry x:Name="nameEntry"
+                   Placeholder="Name"
+                   BackgroundColor="White"
+                   WidthRequest="16"/>
+
+        <Label Padding="2"/>
+        <Button Text="登録"
+                TextColor="White"
+                FontAttributes="Bold"
+                BackgroundColor="Orange"
+                HorizontalOptions="End"
+                Clicked="OnButtonClicked"></Button>
+
+        <CollectionView x:Name="collectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding Name}"
+                                   FontSize="Medium"
+                                   Padding="36"
+                                   TextColor="White"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        <Grid>
+            <ImageButton Source="calender.png" 
+                         Grid.Row="1"
+                         Grid.Column="0"
+                         BackgroundColor="Black"
+                         Clicked="Ondisplaycalenderclicked"></ImageButton>
+            <ImageButton Source="camera.png"
+                         Grid.Row="1"
+                         Grid.Column="1"
+                         BackgroundColor="Black"
+                         Clicked="Ondisplaycameraclicked"></ImageButton>
+            <ImageButton Source="money.png"
+                         Grid.Row="1"
+                         Grid.Column="2"
+                         BackgroundColor="Black"
+                         Clicked="Ondisplaymoneyclicked"></ImageButton>
+            <ImageButton Source="setting.png"
+                         Grid.Row="1"
+                         Grid.Column="3"
+                         BackgroundColor="Black"
+                         Clicked="Ondisplaysettingclicked"></ImageButton>
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>
